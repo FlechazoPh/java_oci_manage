@@ -2,7 +2,7 @@
 
 [English](./en/cloud.md)
 
-R-Bot 客户端内置了完整的 Web 云管理面板，在浏览器中即可管理 Oracle Cloud、AWS、Azure、SolusVM、Cloudflare DNS 等多云平台资源，操作能力与 Telegram 机器人对齐。
+R-Bot 客户端内置了完整的 Web 云管理面板，在浏览器中即可管理 Oracle Cloud、AWS、GCP、Azure、SolusVM、Cloudflare DNS 等多云平台资源，操作能力与 Telegram 机器人对齐。
 
 ---
 
@@ -167,6 +167,27 @@ https://你的IP:9527
 
 ---
 
+## GCP 管理
+
+### Compute Engine 实例管理
+
+| 操作 | 说明 |
+|------|------|
+| 查看实例列表 | 跨可用区聚合展示所有实例及状态 |
+| 创建实例 | 选择可用区、机型、镜像、磁盘大小，支持免费层提示 |
+| 启动 / 停止 / 重启 | 基础实例电源操作 |
+| 删除实例 | 异步删除，完成后 Telegram 通知 |
+| 换 IP | 释放旧外部 IP 并分配新 IP |
+
+### 统计与概览
+
+| 操作 | 说明 |
+|------|------|
+| 概览 | 实例数量统计、可用区分布、e2-micro 免费层计数 |
+| 流量查询 | 近 3 个月收发流量明细 |
+
+---
+
 ## Cloudflare DNS 管理
 
 | 操作 | 说明 |
@@ -225,6 +246,7 @@ https://你的IP:9527
 |------|------|
 | OCI 配置上传 | 粘贴 API 配置文本 + 上传 PEM 密钥文件，自动配置 key_file 路径 |
 | AWS 配置上传 | 粘贴 Access Key ID / Secret Access Key 配置 |
+| GCP 配置上传 | 上传 Service Account JSON 密钥文件，自动提取凭据 |
 | Azure 配置上传 | 粘贴 appId/password/tenant 配置 |
 | SolusVM 配置上传 | 粘贴 API 地址和密钥配置 |
 | 合并模式 | 同名 Profile 自动跳过并提醒，新 Profile 追加到配置中 |

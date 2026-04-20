@@ -45,6 +45,14 @@
 - [x] 费用查询
 - [x] 配额用量查询
 
+## Telegram 机器人 — GCP
+
+- [x] Compute Engine 实例管理（列表、启动、停止、重启、删除）
+- [x] 自定义创建实例（可用区、机型、镜像、磁盘大小、SSH 密钥）
+- [x] 换 IP
+- [x] 概览统计（实例数量、可用区分布、免费层计数）
+- [x] 近 3 月流量查询
+
 ## Telegram 机器人 — Azure
 
 - [x] 自定义开机
@@ -75,8 +83,8 @@
 - [x] 资源监控面板（顶栏显示 CPU / 内存 / 硬盘 / 网络实时指标）
 - [x] 对象存储管理（OCI Object Storage Bucket 浏览、文件上传/下载/删除）
 - [x] ACME 自动 SSL 证书（Let's Encrypt）
-- [x] 云主机同步（一键从 OCI/AWS/Azure/SolusVM 发现主机并导入会话列表，SSE 实时进度）
-- [x] 云平台配置在线上传与管理（OCI/AWS/Azure/SolusVM，合并模式 + 热加载）
+- [x] 云主机同步（一键从 OCI/AWS/GCP/Azure/SolusVM 发现主机并导入会话列表，SSE 实时进度）
+- [x] 云平台配置在线上传与管理（OCI/AWS/GCP/Azure/SolusVM，合并模式 + 热加载）
 - [x] Telegram 验证码登录 + 防暴力破解
 - [x] 中英文界面切换
 - [x] 页面状态记忆（刷新后自动恢复到刷新前的位置，云管理子页面状态同步）
@@ -109,6 +117,12 @@
 - [x] 费用统计（Cost Explorer 集成）
 - [x] 配额用量查询
 
+### GCP
+
+- [x] Compute Engine 实例管理（列表、创建、启动、停止、重启、删除、换 IP）
+- [x] 概览统计（实例计数、可用区分布、免费层统计）
+- [x] 流量查询（近 3 月收发流量明细）
+
 ### Cloudflare DNS
 
 - [x] 域名列表、DNS 记录增删改查
@@ -126,7 +140,7 @@
 
 ## 云主机同步
 
-- [x] 多云平台主机发现（OCI / AWS / Azure / SolusVM 并行查询）
+- [x] 多云平台主机发现（OCI / AWS / GCP / Azure / SolusVM 并行查询）
 - [x] 自动导入到 SSH 会话列表（IP 去重、IPv6 支持）
 - [x] SSE 实时进度反馈（按平台显示查询状态）
 

@@ -2,7 +2,7 @@
 
 [简体中文](../cloud.md)
 
-The R-Bot client includes a full-featured Web cloud management panel. Manage Oracle Cloud, AWS, Azure, SolusVM, and Cloudflare DNS resources directly from your browser — fully aligned with the Telegram bot's capabilities.
+The R-Bot client includes a full-featured Web cloud management panel. Manage Oracle Cloud, AWS, GCP, Azure, SolusVM, and Cloudflare DNS resources directly from your browser — fully aligned with the Telegram bot's capabilities.
 
 ---
 
@@ -167,6 +167,27 @@ Connect to an OCI instance's serial console via Console Connection — useful fo
 
 ---
 
+## GCP Management
+
+### Compute Engine Instance Management
+
+| Action | Description |
+|--------|-------------|
+| View Instance List | Aggregated view across all zones with status |
+| Create Instance | Select zone, machine type, image, disk size; free tier hints included |
+| Start / Stop / Reset | Basic instance power operations |
+| Delete Instance | Async deletion with Telegram notification on completion |
+| Change IP | Release old external IP and allocate a new one |
+
+### Statistics & Overview
+
+| Action | Description |
+|--------|-------------|
+| Overview | Instance count stats, zone distribution, e2-micro free tier count |
+| Traffic Query | Last 3 months sent/received traffic breakdown |
+
+---
+
 ## Cloudflare DNS Management
 
 | Action | Description |
@@ -225,6 +246,7 @@ Upload and manage cloud platform API configurations directly from the web interf
 |---------|-------------|
 | OCI Config Upload | Paste API config text + upload PEM key file, key_file path auto-configured |
 | AWS Config Upload | Paste Access Key ID / Secret Access Key configuration |
+| GCP Config Upload | Upload Service Account JSON key file, credentials auto-extracted |
 | Azure Config Upload | Paste appId/password/tenant configuration |
 | SolusVM Config Upload | Paste API URL and key configuration |
 | Merge Mode | Duplicate Profile names are skipped with a warning, new Profiles are appended |

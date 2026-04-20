@@ -208,6 +208,7 @@ One-click discover hosts from multiple cloud platforms and auto-import them into
 |----------|----------------|
 | **Oracle Cloud (OCI)** | All instance public/private IPs, names, shapes, regions |
 | **AWS** | EC2 instance public/private IPs, names (Name tag), instance types, regions |
+| **GCP** | Compute Engine instance public/private IPs, names, machine types, zones |
 | **Azure** | VM IP addresses and instance info |
 | **SolusVM** | VPS node IP addresses |
 

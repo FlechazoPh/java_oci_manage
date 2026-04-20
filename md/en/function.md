@@ -45,6 +45,14 @@
 - [x] Cost query
 - [x] Quota usage query
 
+## Telegram Bot — GCP
+
+- [x] Compute Engine instance management (list, start, stop, reset, delete)
+- [x] Custom instance creation (zone, machine type, image, disk size, SSH key)
+- [x] Change IP
+- [x] Overview stats (instance counts, zone distribution, free tier count)
+- [x] Last 3 months traffic query
+
 ## Telegram Bot — Azure
 
 - [x] Custom boot
@@ -75,8 +83,8 @@
 - [x] OCI Object Storage management (bucket browsing, file CRUD)
 - [x] Resource monitor panel (top bar displaying real-time CPU / memory / disk / network metrics)
 - [x] ACME auto SSL certificates (Let's Encrypt)
-- [x] Cloud host sync (one-click discover hosts from OCI/AWS/Azure/SolusVM and import to session list, real-time SSE progress)
-- [x] Cloud platform config online upload & management (OCI/AWS/Azure/SolusVM, merge mode + hot reload)
+- [x] Cloud host sync (one-click discover hosts from OCI/AWS/GCP/Azure/SolusVM and import to session list, real-time SSE progress)
+- [x] Cloud platform config online upload & management (OCI/AWS/GCP/Azure/SolusVM, merge mode + hot reload)
 - [x] Telegram verification code login + anti-brute-force
 - [x] Chinese/English interface switching
 - [x] Page state memory (auto-restore position after refresh, cloud management sub-page state sync)
@@ -109,6 +117,12 @@
 - [x] Cost statistics (Cost Explorer integration)
 - [x] Quota usage query
 
+### GCP
+
+- [x] Compute Engine instance management (list, create, start, stop, reset, delete, change IP)
+- [x] Overview stats (instance counts, zone distribution, free tier stats)
+- [x] Traffic query (last 3 months sent/received traffic breakdown)
+
 ### Cloudflare DNS
 
 - [x] Zone listing, DNS record CRUD operations
@@ -126,7 +140,7 @@
 
 ## Cloud Host Sync
 
-- [x] Multi-cloud host discovery (OCI / AWS / Azure / SolusVM parallel queries)
+- [x] Multi-cloud host discovery (OCI / AWS / GCP / Azure / SolusVM parallel queries)
 - [x] Auto-import to SSH session list (IP deduplication, IPv6 support)
 - [x] Real-time SSE progress feedback (per-platform query status)
 

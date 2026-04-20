@@ -105,6 +105,14 @@ aws=end
 
 > `region` 为可选参数，默认为 `us-east-1`。字段名支持驼峰格式（`accessKeyId`）和下划线格式（`access_key_id`）。
 
+### GCP 配置
+
+通过 Web 界面上传 GCP Service Account JSON 密钥文件即可自动配置，无需手动编辑。
+
+上传后系统会自动提取 `project_id`、`client_email`、`private_key` 并写入配置文件，支持多个 Profile。
+
+> Service Account JSON 密钥在 GCP 控制台 → IAM → 服务账号 → 密钥 中生成下载。
+
 ### SSH 连接配置
 
 在 `ssh=begin` 和 `ssh=end` 之间维护 SSH 连接信息。格式：`ssh_IP=用户名:密码或密钥路径`

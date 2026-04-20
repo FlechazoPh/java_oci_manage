@@ -11,7 +11,7 @@
 
 ## Overview
 
-R-Bot is a **dual-architecture** multi-cloud infrastructure management system that drives a local client through a Telegram bot for quick management of Oracle Cloud (OCI), AWS, Azure, SolusVM, and more. The client also includes a built-in **Web SSH Terminal** and **Web Cloud Management Panel**, providing in-browser server operations and cloud resource management.
+R-Bot is a **dual-architecture** multi-cloud infrastructure management system that drives a local client through a Telegram bot for quick management of Oracle Cloud (OCI), AWS, GCP, Azure, SolusVM, and more. The client also includes a built-in **Web SSH Terminal** and **Web Cloud Management Panel**, providing in-browser server operations and cloud resource management.
 
 ### Key Features
 
@@ -21,7 +21,7 @@ R-Bot is a **dual-architecture** multi-cloud infrastructure management system th
 | **Telegram Bot Management** | 30+ cloud operations: boot instances, manage IPs, disks, monitoring, etc. |
 | **Smart Web SSH Terminal** | Host dashboard + terminal workspace with multi-tab, SFTP, port forwarding, and smart multi-key auto-matching |
 | **Web Cloud Management** | Manage instances, networks, volumes, users, DNS, object storage, serial console from your browser |
-| **Multi-Cloud Support** | Oracle Cloud, AWS, Azure, SolusVM |
+| **Multi-Cloud Support** | Oracle Cloud, AWS, GCP, Azure, SolusVM |
 | **Cloudflare Integration** | DNS management, ACME auto-certificates, auto DNS update on IP change |
 | **Cloud Host Sync** | One-click discover and sync hosts from multiple clouds to SSH session list |
 | **GraalVM Native Compilation** | Sub-second startup, low memory footprint |
@@ -72,7 +72,7 @@ Details → [Installation & Configuration](./install.md)
 
 ### Telegram Bot — Cloud Management
 
-Operated through the Telegram bot, supporting Oracle Cloud, AWS, and Azure.
+Operated through the Telegram bot, supporting Oracle Cloud, AWS, GCP, and Azure.
 
 - **Instance Management** — Boot, scale up/down, reset OS, terminate
 - **IP Management** — Change IP, auto DNS update, IPv6
@@ -93,7 +93,7 @@ Access through your browser — no client software required.
 - **Batch Commands** — Send commands to multiple hosts simultaneously, result workbench with continuous execution
 - **Host Dashboard** — Card grid displaying all sessions with search, quick connect
 - **Session Management** — Save connection profiles, centralized key management
-- **Cloud Host Sync** — One-click discover hosts from OCI/AWS/Azure/SolusVM and import to session list
+- **Cloud Host Sync** — One-click discover hosts from OCI/AWS/GCP/Azure/SolusVM and import to session list
 - **SSL Certificates** — Built-in ACME auto-provisioning (Let's Encrypt)
 - **OCI Object Storage** — Manage Buckets and objects in-browser
 
@@ -115,6 +115,7 @@ Manage multi-cloud resources directly from your browser — fully aligned with t
 - **Object Storage** — OCI Object Storage bucket and file management
 - **Email Delivery** — One-click email domain setup (DKIM/DNS/SMTP fully automated), test send
 - **AWS Management** — EC2 instance create/manage/delete, network management, cost statistics
+- **GCP Management** — Compute Engine instance create/manage/delete, change IP, overview stats, traffic query
 - **Azure Management** — VM create/delete/restart, change IP, resource usage
 - **SolusVM Management** — VPS boot/shutdown/reboot, status dashboard
 

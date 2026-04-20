@@ -19,6 +19,7 @@
 |---------|-------------|
 | `/oracle` | Open Oracle Cloud operation keyboard |
 | `/aws` | Open AWS Cloud operation keyboard |
+| `/gcp` | Open GCP Cloud operation keyboard |
 | `/azure` | Open Azure Cloud operation keyboard |
 | `/solusvm` | SolusVM panel VPS management |
 | `/domain` | Cloudflare domain management |

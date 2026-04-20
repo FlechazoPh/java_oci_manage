@@ -105,6 +105,12 @@ aws=end
 
 > `region` is optional, defaults to `us-east-1`. Field names support both camelCase (`accessKeyId`) and snake_case (`access_key_id`).
 
+### GCP Configuration
+
+Upload a GCP Service Account JSON key file via the web interface — credentials are auto-extracted, no manual editing needed. Multiple profiles are supported.
+
+> Generate the Service Account JSON key at: GCP Console → IAM → Service Accounts → Keys.
+
 ### SSH Connection Configuration
 
 Maintain SSH connection info between `ssh=begin` and `ssh=end`. Format: `ssh_IP=username:password_or_key_path`.
