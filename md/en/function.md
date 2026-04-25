@@ -69,13 +69,14 @@
 
 ## Web SSH Terminal
 
-- [x] In-browser SSH connections (password / private key auth)
+- [x] In-browser SSH connections (password / private key auth, SOCKS5 proxy support)
 - [x] Multi-tab parallel terminals
 - [x] SFTP file management (browse, upload, download, delete files/folders, create directories)
 - [x] SFTP online text editor (syntax highlighting, edit server files directly in browser)
 - [x] SSH port forwarding (local / remote)
 - [x] SSH auto-reconnect on disconnect (exponential backoff, supports reboot / network interruption scenarios)
 - [x] Batch commands (send to multiple hosts simultaneously, result workbench with continuous execution)
+- [x] Terminal toolbar (favorites, search, quick tool access)
 - [x] Session profile save & management
 - [x] Centralized SSH key management (encrypted storage, concurrent smart matching)
 - [x] Host fingerprint verification (SHA256)
@@ -83,11 +84,12 @@
 - [x] OCI Object Storage management (bucket browsing, file CRUD)
 - [x] Resource monitor panel (top bar displaying real-time CPU / memory / disk / network metrics)
 - [x] ACME auto SSL certificates (Let's Encrypt)
-- [x] Cloud host sync (one-click discover hosts from OCI/AWS/GCP/Azure/SolusVM and import to session list, real-time SSE progress)
-- [x] Cloud platform config online upload & management (OCI/AWS/GCP/Azure/SolusVM, merge mode + hot reload)
+- [x] Cloud host sync (one-click discover hosts from OCI/AWS/GCP/Azure/DO/SolusVM and import to session list, real-time SSE progress)
+- [x] Cloud platform config online upload & management (OCI/AWS/GCP/Azure/DO/SolusVM, merge mode + hot reload)
 - [x] Telegram verification code login + anti-brute-force
 - [x] Chinese/English interface switching
 - [x] Page state memory (auto-restore position after refresh, cloud management sub-page state sync)
+- [x] Online support IM (built-in chat window with image message support)
 - [x] Responsive layout (mobile-friendly)
 - [x] HTTPS (TLSv1.3) + HTTP/2
 
@@ -98,6 +100,7 @@
 ### Oracle Cloud
 
 - [x] Instance management (create, quick boot, Force ARM boot, start, stop, reboot, terminate, reset OS, scale, rename, repair)
+- [x] Instance list with boot volume info merged inline
 - [x] Force ARM boot (improve ARM creation success rate for trial accounts, supports Web + Telegram)
 - [x] Network management (change IP, attach IPv4/IPv6, reserved IP, delete IP)
 - [x] Volume management (resize, VPU performance, detach, delete, batch VPU)
@@ -127,6 +130,13 @@
 
 - [x] Zone listing, DNS record CRUD operations
 
+### DigitalOcean
+
+- [x] Droplet management (list, create, power on, power off, reboot)
+- [x] Reserved IP management (allocate, assign, unassign, release)
+- [x] Bandwidth monitoring (monthly usage and quota)
+- [x] Billing overview
+
 ### Azure
 
 - [x] VM management (list, create, delete, restart, change IP)
@@ -136,11 +146,15 @@
 
 - [x] VPS management (node list, dashboard, boot/shutdown/reboot)
 
+### General
+
+- [x] Cloud instance quick SSH — all cloud platform instance cards support direct SSH terminal connection
+
 ---
 
 ## Cloud Host Sync
 
-- [x] Multi-cloud host discovery (OCI / AWS / GCP / Azure / SolusVM parallel queries)
+- [x] Multi-cloud host discovery (OCI / AWS / GCP / Azure / DO / SolusVM parallel queries)
 - [x] Auto-import to SSH session list (IP deduplication, IPv6 support)
 - [x] Real-time SSE progress feedback (per-platform query status)
 

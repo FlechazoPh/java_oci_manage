@@ -113,6 +113,21 @@ aws=end
 
 > Service Account JSON 密钥在 GCP 控制台 → IAM → 服务账号 → 密钥 中生成下载。
 
+### DigitalOcean 配置
+
+在 `do=begin` 和 `do=end` 之间放入 API Token 配置，支持多个 Profile。
+
+```ini
+do=begin
+
+[DEFAULT]
+token=dop_v1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+do=end
+```
+
+> Token 在 DigitalOcean 控制台 → API → Tokens 中生成。也可通过 Web 界面「设置」上传。
+
 ### SSH 连接配置
 
 在 `ssh=begin` 和 `ssh=end` 之间维护 SSH 连接信息。格式：`ssh_IP=用户名:密码或密钥路径`

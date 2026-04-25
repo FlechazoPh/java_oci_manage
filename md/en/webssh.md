@@ -87,6 +87,10 @@ Log in directly using the `username` and `password` configured in `client_config
 | **Password** | Enter SSH password |
 | **Private Key** | Paste key content or select a saved key; supports passphrase |
 
+### SOCKS5 Proxy
+
+SSH connections support SOCKS5 proxy for restricted network environments. Configure the proxy address and port in the config drawer.
+
 ### Host Fingerprint Verification
 
 On first connection, the SHA256 host fingerprint is displayed for confirmation and saved. If the fingerprint changes on subsequent connections (possibly due to server reinstallation or a security risk), a warning is shown.
@@ -104,6 +108,16 @@ When an SSH connection is interrupted (e.g., server reboot or network fluctuatio
 Multiple SSH connections can be open simultaneously, each in its own tab, freely switchable. The tab bar also integrates system resource monitoring metrics (CPU / Memory / Disk / Network).
 
 ![Terminal Interface](../../screenshots/terminal.jpg)
+
+---
+
+## Terminal Toolbar
+
+After connecting, the toolbar provides quick access to common features:
+
+- **Favorites** — Quickly bookmark the current session
+- **Search** — Search terminal content
+- **Tools** — Quick access to common operations
 
 ---
 
@@ -209,6 +223,7 @@ One-click discover hosts from multiple cloud platforms and auto-import them into
 | **Oracle Cloud (OCI)** | All instance public/private IPs, names, shapes, regions |
 | **AWS** | EC2 instance public/private IPs, names (Name tag), instance types, regions |
 | **GCP** | Compute Engine instance public/private IPs, names, machine types, zones |
+| **DigitalOcean** | Droplet public/private IPs, names, regions, sizes |
 | **Azure** | VM IP addresses and instance info |
 | **SolusVM** | VPS node IP addresses |
 

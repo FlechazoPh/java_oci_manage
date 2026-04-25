@@ -2,7 +2,7 @@
 
 [简体中文](../cloud.md)
 
-The R-Bot client includes a full-featured Web cloud management panel. Manage Oracle Cloud, AWS, GCP, Azure, SolusVM, and Cloudflare DNS resources directly from your browser — fully aligned with the Telegram bot's capabilities.
+The R-Bot client includes a full-featured Web cloud management panel. Manage Oracle Cloud, AWS, GCP, Azure, DigitalOcean, SolusVM, and Cloudflare DNS resources directly from your browser — fully aligned with the Telegram bot's capabilities.
 
 ---
 
@@ -41,7 +41,7 @@ Switch between Profiles to view different account information.
 
 | Action | Description |
 |--------|-------------|
-| View Instance List | Display all instances and status |
+| View Instance List | Display all instances and status with boot volume info merged inline |
 | Create Instance | Create a new instance with custom specs, image, and network |
 | Force ARM Boot | Improve ARM instance creation success rate for trial accounts (briefly uses paid features, use at your own risk) |
 | Quick Boot | Quickly create an instance from saved configurations |
@@ -200,6 +200,34 @@ Connect to an OCI instance's serial console via Console Connection — useful fo
 
 ---
 
+## DigitalOcean Management
+
+### Droplet Management
+
+| Action | Description |
+|--------|-------------|
+| View Droplet List | Display all Droplets with status, IPs, and specs |
+| Create Droplet | Select image, region, size (5 types), SSH key; supports bulk creation and cloud-init scripts |
+| Power On / Off / Reboot | Basic power operations |
+
+### Reserved IP Management
+
+| Action | Description |
+|--------|-------------|
+| View Reserved IPs | Display all reserved IPs with assignment status |
+| Allocate Reserved IP | Allocate a new reserved IP to a Droplet |
+| Assign / Unassign | Bind or unbind a reserved IP from a Droplet |
+| Release | Delete a reserved IP |
+
+### Monitoring & Billing
+
+| Action | Description |
+|--------|-------------|
+| Bandwidth Monitoring | Monthly traffic usage and quota with threshold alerts |
+| Billing Overview | Account balance and month-to-date charges |
+
+---
+
 ## Azure Management
 
 | Action | Description |
@@ -247,6 +275,7 @@ Upload and manage cloud platform API configurations directly from the web interf
 | OCI Config Upload | Paste API config text + upload PEM key file, key_file path auto-configured |
 | AWS Config Upload | Paste Access Key ID / Secret Access Key configuration |
 | GCP Config Upload | Upload Service Account JSON key file, credentials auto-extracted |
+| DO Config Upload | Paste DigitalOcean API Token |
 | Azure Config Upload | Paste appId/password/tenant configuration |
 | SolusVM Config Upload | Paste API URL and key configuration |
 | Merge Mode | Duplicate Profile names are skipped with a warning, new Profiles are appended |
@@ -272,3 +301,15 @@ The web interface supports 8 themes, each with both light and dark modes:
 | Sunset | Warm orange-coral, cozy |
 
 Switch themes using the selector in the top bar. Toggle the light/dark mode button to switch between light and dark modes.
+
+---
+
+## Cloud Instance Quick SSH
+
+All cloud platforms (OCI / AWS / GCP / Azure / DO / SolusVM) provide an "SSH" button on instance cards. Click to jump directly to the terminal and connect to the instance — no manual connection setup needed.
+
+---
+
+## Online Support
+
+Click the floating button in the bottom-right corner to open the built-in chat window for direct support communication. Image messages are supported.

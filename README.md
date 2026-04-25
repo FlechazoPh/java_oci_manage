@@ -11,7 +11,7 @@
 
 ## 概述
 
-R-Bot 是一套**双端架构**的多云基础设施管理系统，通过 Telegram 机器人驱动本地客户端，快速管理 Oracle Cloud (OCI)、AWS、GCP、Azure、SolusVM 等云平台资源。客户端同时内置了完整的 **Web SSH 终端** 和 **Web 云管理面板**，在浏览器中即可完成服务器运维和云资源管理。
+R-Bot 是一套**双端架构**的多云基础设施管理系统，通过 Telegram 机器人驱动本地客户端，快速管理 Oracle Cloud (OCI)、AWS、GCP、Azure、DigitalOcean、SolusVM 等云平台资源。客户端同时内置了完整的 **Web SSH 终端** 和 **Web 云管理面板**，在浏览器中即可完成服务器运维和云资源管理。
 
 ### 核心特性
 
@@ -21,7 +21,7 @@ R-Bot 是一套**双端架构**的多云基础设施管理系统，通过 Telegr
 | **Telegram 机器人管理** | 30+ 云操作：开机、IP 管理、磁盘、监控等 |
 | **Web SSH 智能终端** | 主机面板 + 终端工作区，多标签页、SFTP 文件管理、端口转发、多密钥智能匹配连接 |
 | **Web 云管理面板** | 浏览器内管理实例、网络、卷、用户、DNS、对象存储、串行控制台等 |
-| **多云支持** | Oracle Cloud、AWS、GCP、Azure、SolusVM |
+| **多云支持** | Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM |
 | **Cloudflare 集成** | 域名 DNS 管理、ACME 证书自动签发、换 IP 自动更新 DNS |
 | **云主机同步** | 一键从多云平台发现并同步主机到 SSH 会话列表 |
 | **原生编译** | 亚秒级启动，极低内存占用 |
@@ -86,14 +86,14 @@ bash sh_client_bot.sh
 
 通过浏览器访问，无需安装客户端软件。
 
-- **SSH 连接** — 密码/私钥认证，多标签页，断线自动重连
+- **SSH 连接** — 密码/私钥认证，多标签页，断线自动重连，SOCKS5 代理
 - **资源监控** — 顶栏实时显示 CPU、内存、硬盘、网络指标
 - **SFTP 文件管理** — 浏览、上传、下载、删除、在线编辑（语法高亮）
 - **端口转发** — 本地转发和远程转发
 - **批量命令** — 向多个主机同时发送命令，结果工作台支持连续执行
 - **主机面板** — 卡片网格展示所有会话，搜索过滤、快速连接
 - **会话管理** — 保存连接配置，集中密钥管理
-- **云主机同步** — 一键从 OCI/AWS/GCP/Azure/SolusVM 发现主机并导入会话列表
+- **云主机同步** — 一键从 OCI/AWS/GCP/Azure/DO/SolusVM 发现主机并导入会话列表
 - **SSL 证书** — 内置 ACME 自动签发（Let's Encrypt）
 - **对象存储** — OCI Object Storage 的 Bucket 和文件管理
 
@@ -116,6 +116,7 @@ bash sh_client_bot.sh
 - **Email Delivery** — 一键搭建邮件域（DKIM/DNS/SMTP 全自动）、测试发信
 - **AWS 管理** — EC2 实例创建/管理/删除、网络管理、费用统计
 - **GCP 管理** — Compute Engine 实例创建/管理/删除、换 IP、概览统计、流量查询
+- **DigitalOcean 管理** — Droplet 创建/管理、保留 IP、带宽监控、账单概览
 - **Azure 管理** — VM 创建/删除/重启、换 IP、资源用量
 - **SolusVM 管理** — VPS 开关机/重启、状态仪表盘
 

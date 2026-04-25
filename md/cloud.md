@@ -2,7 +2,7 @@
 
 [English](./en/cloud.md)
 
-R-Bot 客户端内置了完整的 Web 云管理面板，在浏览器中即可管理 Oracle Cloud、AWS、GCP、Azure、SolusVM、Cloudflare DNS 等多云平台资源，操作能力与 Telegram 机器人对齐。
+R-Bot 客户端内置了完整的 Web 云管理面板，在浏览器中即可管理 Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM、Cloudflare DNS 等多云平台资源，操作能力与 Telegram 机器人对齐。
 
 ---
 
@@ -41,7 +41,7 @@ https://你的IP:9527
 
 | 操作 | 说明 |
 |------|------|
-| 查看实例列表 | 展示所有实例及状态 |
+| 查看实例列表 | 展示所有实例及状态，启动盘信息合并展示 |
 | 创建实例 | 选择配置规格、镜像、网络等参数创建新实例 |
 | 强开 ARM | 试用期提升 ARM 实例创建成功率（需短暂使用账户收费功能，风险自担） |
 | 快捷开机 | 基于已保存的配置快速创建实例 |
@@ -200,6 +200,34 @@ https://你的IP:9527
 
 ---
 
+## DigitalOcean 管理
+
+### Droplet 管理
+
+| 操作 | 说明 |
+|------|------|
+| 查看 Droplet 列表 | 展示所有 Droplet 及状态、IP、规格 |
+| 创建 Droplet | 选择镜像、区域、规格（5 种类型）、SSH 密钥，支持批量创建和 cloud-init 脚本 |
+| 开机 / 关机 / 重启 | 基础电源操作 |
+
+### 保留 IP 管理
+
+| 操作 | 说明 |
+|------|------|
+| 查看保留 IP 列表 | 展示所有保留 IP 及绑定状态 |
+| 分配保留 IP | 为 Droplet 分配新的保留 IP |
+| 绑定 / 解绑 | 将保留 IP 绑定到 Droplet 或从 Droplet 解绑 |
+| 释放 | 删除保留 IP |
+
+### 监控与账单
+
+| 操作 | 说明 |
+|------|------|
+| 带宽监控 | 每月流量用量及配额，超额预警 |
+| 账单概览 | 账户余额、本月费用 |
+
+---
+
 ## Azure 管理
 
 | 操作 | 说明 |
@@ -247,6 +275,7 @@ https://你的IP:9527
 | OCI 配置上传 | 粘贴 API 配置文本 + 上传 PEM 密钥文件，自动配置 key_file 路径 |
 | AWS 配置上传 | 粘贴 Access Key ID / Secret Access Key 配置 |
 | GCP 配置上传 | 上传 Service Account JSON 密钥文件，自动提取凭据 |
+| DO 配置上传 | 粘贴 DigitalOcean API Token |
 | Azure 配置上传 | 粘贴 appId/password/tenant 配置 |
 | SolusVM 配置上传 | 粘贴 API 地址和密钥配置 |
 | 合并模式 | 同名 Profile 自动跳过并提醒，新 Profile 追加到配置中 |
@@ -272,3 +301,15 @@ Web 界面支持 8 种主题，每种均包含亮色和暗色两种模式：
 | 日落 | 暖橘珊瑚色，温馨 |
 
 在顶部栏的主题选择器中切换主题，点击明暗模式按钮切换亮色/暗色。
+
+---
+
+## 云实例一键 SSH
+
+所有云平台（OCI / AWS / GCP / Azure / DO / SolusVM）的实例卡片上均提供「SSH」快捷按钮，点击后直接跳转到终端并连接该实例，无需手动填写连接信息。
+
+---
+
+## 在线客服
+
+页面右下角的悬浮按钮打开内置聊天窗口，可直接与客服沟通，支持发送图片消息。

@@ -111,6 +111,21 @@ Upload a GCP Service Account JSON key file via the web interface — credentials
 
 > Generate the Service Account JSON key at: GCP Console → IAM → Service Accounts → Keys.
 
+### DigitalOcean Configuration
+
+Place API Token between `do=begin` and `do=end`. Multiple profiles are supported.
+
+```ini
+do=begin
+
+[DEFAULT]
+token=dop_v1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+do=end
+```
+
+> Generate the token at: DigitalOcean Console → API → Tokens. Can also be uploaded via the web interface "Settings".
+
 ### SSH Connection Configuration
 
 Maintain SSH connection info between `ssh=begin` and `ssh=end`. Format: `ssh_IP=username:password_or_key_path`.
