@@ -2,7 +2,7 @@
 
 [简体中文](../cloud.md)
 
-The R-Bot client includes a full-featured Web cloud management panel. Manage Oracle Cloud, AWS, GCP, Azure, DigitalOcean, SolusVM, and Cloudflare DNS resources directly from your browser — fully aligned with the Telegram bot's capabilities.
+The R-Bot client includes a full-featured Web cloud management panel. Manage Oracle Cloud, AWS, GCP, Azure, DigitalOcean, SolusVM, VirtFusion, and Cloudflare DNS resources directly from your browser — fully aligned with the Telegram bot's capabilities.
 
 ---
 
@@ -251,6 +251,21 @@ Connect to an OCI instance's serial console via Console Connection — useful fo
 
 ---
 
+## VirtFusion Management
+
+| Action | Description |
+|--------|-------------|
+| Vendor Grouping | Group instance cards by configured vendor alias |
+| List Instances | Display state, IPv4/IPv6, CPU, memory, disk, and creation time |
+| Traffic Panel | Show usage and percentage for the current billing period |
+| Quick SSH | One-click jump to Web SSH for running instances |
+| Start / Stop / Restart / Power Off | Common power actions |
+| Rename | Rename an instance directly from the card |
+| Reset Password | Return a new system password (shown once) |
+| Config Error Handling | Show direct reconfiguration hints when token or panel access fails |
+
+---
+
 ## Settings
 
 ### Instance Monitoring
@@ -278,6 +293,7 @@ Upload and manage cloud platform API configurations directly from the web interf
 | DO Config Upload | Paste DigitalOcean API Token |
 | Azure Config Upload | Paste appId/password/tenant configuration |
 | SolusVM Config Upload | Paste API URL and key configuration |
+| VirtFusion Config Upload | Paste host/token/preset or use preset vendors for quick filling |
 | Merge Mode | Duplicate Profile names are skipped with a warning, new Profiles are appended |
 | Cloudflare Config | Edit Cloudflare email and API Key online |
 | Network Config | Edit local address, URL name, and startup mode online |
@@ -306,7 +322,7 @@ Switch themes using the selector in the top bar. Toggle the light/dark mode butt
 
 ## Cloud Instance Quick SSH
 
-All cloud platforms (OCI / AWS / GCP / Azure / DO / SolusVM) provide an "SSH" button on instance cards. Click to jump directly to the terminal and connect to the instance — no manual connection setup needed.
+All cloud platforms (OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion) provide an "SSH" button on instance cards. Click to jump directly to the terminal and connect to the instance — no manual connection setup needed.
 
 ---
 

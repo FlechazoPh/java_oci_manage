@@ -11,7 +11,7 @@
 
 ## 概述
 
-R-Bot 是一套**双端架构**的多云基础设施管理系统，通过 Telegram 机器人驱动本地客户端，快速管理 Oracle Cloud (OCI)、AWS、GCP、Azure、DigitalOcean、SolusVM 等云平台资源。客户端同时内置了完整的 **Web SSH 终端** 和 **Web 云管理面板**，在浏览器中即可完成服务器运维和云资源管理。
+R-Bot 是一套**双端架构**的多云基础设施管理系统，通过 Telegram 机器人驱动本地客户端，快速管理 Oracle Cloud (OCI)、AWS、GCP、Azure、DigitalOcean、SolusVM、VirtFusion 等云平台资源。客户端同时内置了完整的 **Web SSH 终端** 和 **Web 云管理面板**，在浏览器中即可完成服务器运维和云资源管理。
 
 ### 核心特性
 
@@ -21,7 +21,7 @@ R-Bot 是一套**双端架构**的多云基础设施管理系统，通过 Telegr
 | **Telegram 机器人管理** | 30+ 云操作：开机、IP 管理、磁盘、监控等 |
 | **Web SSH 智能终端** | 主机面板 + 终端工作区，多标签页、SFTP 文件管理、端口转发、多密钥智能匹配连接 |
 | **Web 云管理面板** | 浏览器内管理实例、网络、卷、用户、DNS、对象存储、串行控制台等 |
-| **多云支持** | Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM |
+| **多云支持** | Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM、VirtFusion |
 | **Cloudflare 集成** | 域名 DNS 管理、ACME 证书自动签发、换 IP 自动更新 DNS |
 | **云主机同步** | 一键从多云平台发现并同步主机到 SSH 会话列表 |
 | **原生编译** | 亚秒级启动，极低内存占用 |
@@ -72,13 +72,14 @@ bash sh_client_bot.sh
 
 ### Telegram 机器人 — 云管理
 
-通过 Telegram 机器人操作，支持 Oracle Cloud、AWS、GCP 和 Azure。
+通过 Telegram 机器人操作，支持 Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM、VirtFusion。
 
 - **实例管理** — 开机、升降配、重置系统、终止
 - **IP 管理** — 换 IP、自动 DNS 更新、IPv6
 - **磁盘管理** — 扩容、性能调优、分离/附加
 - **监控告警** — 状态监控、自动换 IP、自动重启
 - **账户管理** — 用户管理、API 密钥、2FA 重置、配额查询
+- **面板类云支持** — DigitalOcean Droplet、SolusVM VPS、VirtFusion 实例的查询与基础电源操作
 
 完整列表 → [已实现功能](md/function.md) ｜ [机器人命令说明](md/BOT-README.md)
 
@@ -93,7 +94,7 @@ bash sh_client_bot.sh
 - **批量命令** — 向多个主机同时发送命令，结果工作台支持连续执行
 - **主机面板** — 卡片网格展示所有会话，搜索过滤、快速连接
 - **会话管理** — 保存连接配置，集中密钥管理
-- **云主机同步** — 一键从 OCI/AWS/GCP/Azure/DO/SolusVM 发现主机并导入会话列表
+- **云主机同步** — 一键从 OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion 发现主机并导入会话列表
 - **SSL 证书** — 内置 ACME 自动签发（Let's Encrypt）
 - **对象存储** — OCI Object Storage 的 Bucket 和文件管理
 
@@ -119,6 +120,7 @@ bash sh_client_bot.sh
 - **DigitalOcean 管理** — Droplet 创建/管理、保留 IP、带宽监控、账单概览
 - **Azure 管理** — VM 创建/删除/重启、换 IP、资源用量
 - **SolusVM 管理** — VPS 开关机/重启、状态仪表盘
+- **VirtFusion 管理** — 厂商分组实例列表、流量面板、SSH 快捷连接、开关机/重启、改名、重置密码
 
 详见 → [Web 云管理面板指南](md/cloud.md)
 
@@ -225,4 +227,3 @@ bash sh_client_bot.sh uninstall
 > 持续证明该项目仍然存活
 
 </details>
-

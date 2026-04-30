@@ -158,6 +158,23 @@ hash=你的API_Hash
 solusvm=end
 ```
 
+### VirtFusion 配置
+
+在 `virtfusion=begin` 和 `virtfusion=end` 之间维护 VirtFusion 厂商配置。
+
+```ini
+virtfusion=begin
+
+[GreenCloud DE EPYC]
+host=cp.green.cloud
+token=你的VirtFusion_API_Token
+preset=greencloud
+
+virtfusion=end
+```
+
+> `host` 只填写控制面板域名，不要带 `https://`、端口或路径。`token` 可在 `https://cp.<你的面板域名>/account/api` 生成。`preset` 可选，常见值有 `greencloud`、`extravm`、`custom`；不填时默认按 `custom` 处理。
+
 ### Cloudflare 配置（可选）
 
 ```ini
@@ -209,6 +226,7 @@ https://你的IP:9527
 - 默认端口 `9527`，可通过启动参数修改
 - 确保端口已开放 — 使用 [端口测试工具](https://port.ping.pe) 检查
 - 本地模式（`model=local`）无需开端口，仅通过 Telegram 机器人操作
+- 在顶部「设置 → 配置文件」中也可直接上传 AWS / GCP / DigitalOcean / SolusVM / VirtFusion 等配置
 
 ---
 

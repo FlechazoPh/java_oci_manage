@@ -21,7 +21,9 @@
 | `/aws` | Open AWS Cloud operation keyboard |
 | `/gcp` | Open GCP Cloud operation keyboard |
 | `/azure` | Open Azure Cloud operation keyboard |
+| `/do` | Open DigitalOcean Droplet operation keyboard |
 | `/solusvm` | SolusVM panel VPS management |
+| `/virtfusion` | Open VirtFusion instance operation keyboard |
 | `/domain` | Cloudflare domain management |
 
 ### Account Management

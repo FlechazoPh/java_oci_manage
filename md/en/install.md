@@ -156,6 +156,23 @@ hash=your_api_hash
 solusvm=end
 ```
 
+### VirtFusion Configuration
+
+Maintain VirtFusion vendor configuration between `virtfusion=begin` and `virtfusion=end`.
+
+```ini
+virtfusion=begin
+
+[GreenCloud DE EPYC]
+host=cp.green.cloud
+token=your_virtfusion_api_token
+preset=greencloud
+
+virtfusion=end
+```
+
+> `host` should be the panel domain only. Do not include `https://`, ports, or paths. Generate the `token` at `https://cp.<your-panel-host>/account/api`. `preset` is optional; common values include `greencloud`, `extravm`, and `custom`. If omitted, it falls back to `custom`.
+
 ### Cloudflare Configuration (Optional)
 
 ```ini
@@ -204,3 +221,4 @@ https://YOUR_IP:9527
 - Default port is `9527`, configurable via startup parameters
 - Ensure the port is open — use [Port Test Tool](https://port.ping.pe) to check
 - Local mode (`model=local`) doesn't require open ports — operate through Telegram Bot only
+- You can also upload AWS / GCP / DigitalOcean / SolusVM / VirtFusion configs directly from `Settings -> Config Files`

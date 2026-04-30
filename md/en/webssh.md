@@ -226,6 +226,7 @@ One-click discover hosts from multiple cloud platforms and auto-import them into
 | **DigitalOcean** | Droplet public/private IPs, names, regions, sizes |
 | **Azure** | VM IP addresses and instance info |
 | **SolusVM** | VPS node IP addresses |
+| **VirtFusion** | First public IPv4 / IPv6, instance name, and vendor alias |
 
 ### How It Works
 

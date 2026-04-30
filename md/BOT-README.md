@@ -24,9 +24,17 @@
 
 - 获取azure云操作键盘来进行开机等等操作
 
+### /do
+
+- 获取 DigitalOcean Droplet 操作菜单，可进行列表、详情、电源操作和流量查询
+
 ### /solusvm
 
 - 支持使用solusvm面板的云厂商来管理vps
+
+### /virtfusion
+
+- 获取 VirtFusion 实例操作菜单，可查看厂商下实例并执行基础电源操作
 
 ### /domain
 

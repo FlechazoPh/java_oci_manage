@@ -2,7 +2,7 @@
 
 [English](./en/cloud.md)
 
-R-Bot 客户端内置了完整的 Web 云管理面板，在浏览器中即可管理 Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM、Cloudflare DNS 等多云平台资源，操作能力与 Telegram 机器人对齐。
+R-Bot 客户端内置了完整的 Web 云管理面板，在浏览器中即可管理 Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM、VirtFusion、Cloudflare DNS 等多云平台资源，操作能力与 Telegram 机器人对齐。
 
 ---
 
@@ -251,6 +251,21 @@ https://你的IP:9527
 
 ---
 
+## VirtFusion 管理
+
+| 操作 | 说明 |
+|------|------|
+| 厂商分组展示 | 按配置的 vendor alias 分组展示实例卡片 |
+| 查看实例列表 | 展示状态、IPv4/IPv6、CPU、内存、磁盘、创建时间 |
+| 流量面板 | 显示当前计费周期流量使用量与百分比 |
+| SSH 快捷连接 | 对运行中的实例一键跳转到 Web SSH |
+| 开机 / 关机 / 重启 / 强制关机 | 常用电源操作 |
+| 修改名称 | 直接在卡片上重命名实例 |
+| 重置密码 | 返回新的系统密码（仅展示一次） |
+| 配置错误提示 | Token 失效或面板不可访问时，工作台直接提示并支持跳转重新配置 |
+
+---
+
 ## 设置
 
 ### 实例监控
@@ -278,6 +293,7 @@ https://你的IP:9527
 | DO 配置上传 | 粘贴 DigitalOcean API Token |
 | Azure 配置上传 | 粘贴 appId/password/tenant 配置 |
 | SolusVM 配置上传 | 粘贴 API 地址和密钥配置 |
+| VirtFusion 配置上传 | 粘贴 host/token/preset 或使用预置厂商快速填充 |
 | 合并模式 | 同名 Profile 自动跳过并提醒，新 Profile 追加到配置中 |
 | Cloudflare 配置 | 在线编辑 Cloudflare 邮箱和 API Key |
 | 网络配置 | 在线编辑本机地址、URL 名称、启动模式 |
@@ -306,7 +322,7 @@ Web 界面支持 8 种主题，每种均包含亮色和暗色两种模式：
 
 ## 云实例一键 SSH
 
-所有云平台（OCI / AWS / GCP / Azure / DO / SolusVM）的实例卡片上均提供「SSH」快捷按钮，点击后直接跳转到终端并连接该实例，无需手动填写连接信息。
+所有云平台（OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion）的实例卡片上均提供「SSH」快捷按钮，点击后直接跳转到终端并连接该实例，无需手动填写连接信息。
 
 ---
 

@@ -61,6 +61,19 @@
 - [x] Query quota usage
 - [x] Delete all resources
 
+## Telegram Bot — DigitalOcean
+
+- [x] Droplet management (list, detail, power on, power off, reboot, destroy)
+- [x] Multi-profile switching
+- [x] Per-droplet monthly traffic query
+
+## Telegram Bot — VirtFusion
+
+- [x] Vendor-grouped instance listing
+- [x] Instance detail (state, CPU, memory, disk, IPv4/IPv6, traffic, creation time)
+- [x] Start / Stop / Restart / Force power off
+- [x] System password reset
+
 ## Telegram Bot — SolusVM
 
 - [x] SolusVM panel VPS management
@@ -84,8 +97,8 @@
 - [x] OCI Object Storage management (bucket browsing, file CRUD)
 - [x] Resource monitor panel (top bar displaying real-time CPU / memory / disk / network metrics)
 - [x] ACME auto SSL certificates (Let's Encrypt)
-- [x] Cloud host sync (one-click discover hosts from OCI/AWS/GCP/Azure/DO/SolusVM and import to session list, real-time SSE progress)
-- [x] Cloud platform config online upload & management (OCI/AWS/GCP/Azure/DO/SolusVM, merge mode + hot reload)
+- [x] Cloud host sync (one-click discover hosts from OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion and import to session list, real-time SSE progress)
+- [x] Cloud platform config online upload & management (OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion, merge mode + hot reload)
 - [x] Telegram verification code login + anti-brute-force
 - [x] Chinese/English interface switching
 - [x] Page state memory (auto-restore position after refresh, cloud management sub-page state sync)
@@ -146,6 +159,15 @@
 
 - [x] VPS management (node list, dashboard, boot/shutdown/reboot)
 
+### VirtFusion
+
+- [x] Instance card management (vendor grouping, state/spec/IP/created-time display)
+- [x] Traffic progress and current-period usage
+- [x] One-click SSH connection
+- [x] Start / Stop / Restart / Force power off
+- [x] Instance rename
+- [x] System password reset
+
 ### General
 
 - [x] Cloud instance quick SSH — all cloud platform instance cards support direct SSH terminal connection
@@ -154,7 +176,7 @@
 
 ## Cloud Host Sync
 
-- [x] Multi-cloud host discovery (OCI / AWS / GCP / Azure / DO / SolusVM parallel queries)
+- [x] Multi-cloud host discovery (OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion parallel queries)
 - [x] Auto-import to SSH session list (IP deduplication, IPv6 support)
 - [x] Real-time SSE progress feedback (per-platform query status)
 

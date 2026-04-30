@@ -61,6 +61,19 @@
 - [x] 查询配额用量
 - [x] 删除所有资源
 
+## Telegram 机器人 — DigitalOcean
+
+- [x] Droplet 管理（列表、详情、开机、关机、重启、销毁）
+- [x] 多 Profile 切换
+- [x] 单实例当月流量查询
+ 
+## Telegram 机器人 — VirtFusion
+
+- [x] 厂商维度实例列表
+- [x] 实例详情（状态、CPU、内存、磁盘、IPv4/IPv6、流量、创建时间）
+- [x] 开机 / 关机 / 重启 / 强制关机
+- [x] 重置系统密码
+
 ## Telegram 机器人 — SolusVM
 
 - [x] SolusVM 面板 VPS 管理
@@ -84,8 +97,8 @@
 - [x] 资源监控面板（顶栏显示 CPU / 内存 / 硬盘 / 网络实时指标）
 - [x] 对象存储管理（OCI Object Storage Bucket 浏览、文件上传/下载/删除）
 - [x] ACME 自动 SSL 证书（Let's Encrypt）
-- [x] 云主机同步（一键从 OCI/AWS/GCP/Azure/DO/SolusVM 发现主机并导入会话列表，SSE 实时进度）
-- [x] 云平台配置在线上传与管理（OCI/AWS/GCP/Azure/DO/SolusVM，合并模式 + 热加载）
+- [x] 云主机同步（一键从 OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion 发现主机并导入会话列表，SSE 实时进度）
+- [x] 云平台配置在线上传与管理（OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion，合并模式 + 热加载）
 - [x] Telegram 验证码登录 + 防暴力破解
 - [x] 中英文界面切换
 - [x] 页面状态记忆（刷新后自动恢复到刷新前的位置，云管理子页面状态同步）
@@ -146,6 +159,15 @@
 
 - [x] VPS 管理（节点列表、仪表盘、开关机、重启）
 
+### VirtFusion
+
+- [x] 实例卡片管理（按厂商分组、状态/规格/IP/创建时间展示）
+- [x] 流量进度条与当前周期用量展示
+- [x] SSH 一键连接
+- [x] 开机 / 关机 / 重启 / 强制关机
+- [x] 实例改名
+- [x] 系统密码重置
+
 ### 通用
 
 - [x] 云实例一键 SSH — 所有云平台（含 DO）实例卡片支持直接快速连接 SSH 终端
@@ -154,7 +176,7 @@
 
 ## 云主机同步
 
-- [x] 多云平台主机发现（OCI / AWS / GCP / Azure / DO / SolusVM 并行查询）
+- [x] 多云平台主机发现（OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion 并行查询）
 - [x] 自动导入到 SSH 会话列表（IP 去重、IPv6 支持）
 - [x] SSE 实时进度反馈（按平台显示查询状态）
 
