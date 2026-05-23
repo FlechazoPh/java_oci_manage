@@ -41,6 +41,7 @@
 
 - [x] EC2 实例管理（列表、启动、停止、重启、终止）
 - [x] 自定义创建 EC2 实例（AMI、机型、密钥选择）
+- [x] Lightsail 轻量实例管理（列表、启动、停止、重启、删除、流量查询）
 - [x] 换 IP
 - [x] 费用查询
 - [x] 配额用量查询
@@ -129,6 +130,8 @@
 
 - [x] EC2 实例管理（列表、启动、停止、重启、终止）
 - [x] 创建 EC2 实例（AMI 选择、机型选择、密钥管理、异步创建）
+- [x] Lightsail 轻量实例管理（列表、启动、停止、重启、删除、本月监控流量）
+- [x] Lightsail 网络/IP 管理（静态 IP 创建/绑定/解绑/释放、换静态 IP、重启换动态 IP、防火墙端口）
 - [x] 网络管理（VPC、安全组）
 - [x] 费用统计（Cost Explorer 集成）
 - [x] 配额用量查询
@@ -176,7 +179,7 @@
 
 ## 云主机同步
 
-- [x] 多云平台主机发现（OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion 并行查询）
+- [x] 多云平台主机发现（OCI / AWS EC2 / AWS Lightsail / GCP / Azure / DO / SolusVM / VirtFusion 并行查询）
 - [x] 自动导入到 SSH 会话列表（IP 去重、IPv6 支持）
 - [x] SSE 实时进度反馈（按平台显示查询状态）
 

@@ -60,7 +60,7 @@ bash sh_client_bot.sh
 首次启动会自动生成凭据，页面顶部会显示激活提示。两种方式完成激活：
 
 - **方式一**：复制页面提示的 `/bindclient` 命令，发送给 [Telegram 机器人](https://t.me/radiance_helper_bot) 完成绑定
-- **方式二**：如已有账户，点击「已有账户？」输入已有的用户名和密码绑定
+- **方式二**：如已有账户，可以在页面顶部红色激活提示栏里点击「已有账户？」按钮，或直接修改 `client_config` 里的 `username=` / `password=` 后重启
 
 激活后即可添加云平台 API 参数开始使用。
 
@@ -72,7 +72,7 @@ bash sh_client_bot.sh
 
 ### Telegram 机器人 — 云管理
 
-通过 Telegram 机器人操作，支持 Oracle Cloud、AWS、GCP、Azure、DigitalOcean、SolusVM、VirtFusion。
+通过 Telegram 机器人操作，支持 Oracle Cloud、AWS（EC2 / Lightsail）、GCP、Azure、DigitalOcean、SolusVM、VirtFusion。
 
 - **实例管理** — 开机、升降配、重置系统、终止
 - **IP 管理** — 换 IP、自动 DNS 更新、IPv6
@@ -94,7 +94,7 @@ bash sh_client_bot.sh
 - **批量命令** — 向多个主机同时发送命令，结果工作台支持连续执行
 - **主机面板** — 卡片网格展示所有会话，搜索过滤、快速连接
 - **会话管理** — 保存连接配置，集中密钥管理
-- **云主机同步** — 一键从 OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion 发现主机并导入会话列表
+- **云主机同步** — 一键从 OCI/AWS EC2/AWS Lightsail/GCP/Azure/DO/SolusVM/VirtFusion 发现主机并导入会话列表
 - **SSL 证书** — 内置 ACME 自动签发（Let's Encrypt）
 - **对象存储** — OCI Object Storage 的 Bucket 和文件管理
 
@@ -115,7 +115,7 @@ bash sh_client_bot.sh
 - **DNS 管理** — Cloudflare 域名记录的增删改查
 - **对象存储** — OCI Object Storage 的 Bucket 和文件管理
 - **Email Delivery** — 一键搭建邮件域（DKIM/DNS/SMTP 全自动）、测试发信
-- **AWS 管理** — EC2 实例创建/管理/删除、网络管理、费用统计
+- **AWS 管理** — EC2 实例创建/管理/删除，Lightsail 轻量实例列表/电源/删除/流量/网络 IP 管理，费用统计
 - **GCP 管理** — Compute Engine 实例创建/管理/删除、换 IP、概览统计、流量查询
 - **DigitalOcean 管理** — Droplet 创建/管理、保留 IP、带宽监控、账单概览
 - **Azure 管理** — VM 创建/删除/重启、换 IP、资源用量

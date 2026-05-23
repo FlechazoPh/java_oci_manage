@@ -18,7 +18,7 @@ wget -O sh_client_bot.sh https://github.com/semicons/java_oci_manage/releases/la
 
 首次启动时，系统会自动生成用户凭据并写入 `client_config` 文件。此时客户端处于未激活状态，页面顶部会显示红色提示栏。
 
-### 方式一：通过 Telegram 机器人激活（推荐）
+### 方式一：通过 Telegram 机器人激活
 
 1. 打开 Web 页面，复制提示栏中的 `/bindclient` 命令
 2. 发送给 [Telegram 机器人](https://t.me/radiance_helper_bot)
@@ -28,9 +28,25 @@ wget -O sh_client_bot.sh https://github.com/semicons/java_oci_manage/releases/la
 
 如果你已有其他客户端的账户凭据：
 
-1. 点击提示栏中的「已有账户？」
-2. 输入已有的用户名和密码
-3. 绑定成功后自动登录
+可以任选一种方式：
+
+- **在 Web 页面操作**：
+  1. 打开客户端 Web 页面，看页面最上方的红色未激活提示栏
+  2. 在这条红色提示栏里点击「已有账户？」按钮（不是在 Telegram 里点击）
+  3. 在弹出的输入框里填写已有的用户名和密码
+  4. 绑定成功后自动登录
+
+- **直接修改配置文件**：
+  1. 打开客户端目录下的 `client_config`
+  2. 找到 `username=` 和 `password=`
+  3. 把等号后面改成已有账户的用户名和密码，例如：
+
+     ```ini
+     username=你的已有用户名
+     password=你的已有密码
+     ```
+
+  4. 保存后重启客户端
 
 > 请妥善保存凭据。如果 Telegram 账号被封，可以凭此信息重新绑定。
 
@@ -85,7 +101,7 @@ azure=end
 
 ### AWS 配置
 
-在 `aws=begin` 和 `aws=end` 之间放入 AWS 凭据配置，支持多个 Profile。
+在 `aws=begin` 和 `aws=end` 之间放入 AWS 凭据配置，支持多个 Profile。EC2 和 Lightsail 轻量实例共用这套 AWS Profile。
 
 ```ini
 aws=begin
@@ -103,7 +119,7 @@ region=ap-northeast-1
 aws=end
 ```
 
-> `region` 为可选参数，默认为 `us-east-1`。字段名支持驼峰格式（`accessKeyId`）和下划线格式（`access_key_id`）。
+> `region` 为可选参数，默认为 `us-east-1`。字段名支持驼峰格式（`accessKeyId`）和下划线格式（`access_key_id`）。如需管理 Lightsail，请确保该 AWS 凭据拥有 Lightsail 实例、静态 IP、端口、防火墙和监控指标相关权限。
 
 ### GCP 配置
 
