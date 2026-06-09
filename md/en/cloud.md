@@ -84,10 +84,11 @@ Switch between Profiles to view different account information.
 | List Users | Display all users in the tenancy |
 | Create User | Add a new admin user |
 | Update Email | Change user email address |
-| Reset Password | Reset user login password |
-| Clear 2FA | Remove bound two-factor authentication |
+| Reset Password | Reset user login password (system-generated strong password supported) |
+| Clear MFA | One-click clear all multi-factor authentication factors |
 | Change Tenant Name | Modify tenancy display name |
 | Delete User | Remove specified user |
+| Password Policy | View identity domain password policy (expiration, complexity, etc.) |
 
 ### Object Storage (OSS)
 
@@ -223,7 +224,7 @@ Connect to an OCI instance's serial console via Console Connection — useful fo
 
 | Action | Description |
 |--------|-------------|
-| Bandwidth Monitoring | Monthly traffic usage and quota with threshold alerts |
+| Bandwidth Monitoring | Per-instance current-period traffic on cards; approximated by daily segment integration (DO has no official traffic API) |
 | Billing Overview | Account balance and month-to-date charges |
 
 ---
@@ -322,10 +323,24 @@ Switch themes using the selector in the top bar. Toggle the light/dark mode butt
 
 ## Cloud Instance Quick SSH
 
-All cloud platforms (OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion) provide an "SSH" button on instance cards. Click to jump directly to the terminal and connect to the instance — no manual connection setup needed.
+All cloud platforms (OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion) provide an "SSH" button on instance cards. Click to jump directly to the terminal and connect to the instance — no manual connection setup needed. Each card also provides a one-click IP copy button.
+
+---
+
+## Multi-Cloud Health Check
+
+A single panel summarizes total instance count, running/stopped status, and DNS info across all cloud platforms — a one-screen overview of multi-cloud asset health.
+
+---
+
+## Workbench Experience
+
+- **Priority-Ordered Tabs** — Cloud platform tabs are arranged by frequency of use (OCI, AWS, Azure, GCP, DO, Cloudflare, SolusVM, VirtFusion)
+- **Form-Based Config Upload** — Configuration upload switched to form inputs, no more manual formatting
+- **Regrouped Action Buttons** — Instance action buttons grouped by usage frequency
 
 ---
 
 ## Online Support
 
-Click the floating button in the bottom-right corner to open the built-in chat window for direct support communication. Image messages are supported.
+Click the floating button in the bottom-right corner to open the built-in chat window for direct support communication. Image messages are supported. The icon supports **auto-hide** and **free dragging** to avoid blocking the operation area.

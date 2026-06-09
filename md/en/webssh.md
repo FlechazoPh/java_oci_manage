@@ -118,6 +118,42 @@ After connecting, the toolbar provides quick access to common features:
 - **Favorites** — Quickly bookmark the current session
 - **Search** — Search terminal content
 - **Tools** — Quick access to common operations
+- **Split** — Split the current terminal horizontally into two independent panes
+- **Suspend** — Explicitly suspend the current session; it remains on the server after closing the tab
+
+---
+
+## Terminal Split-Screen
+
+Click the "Split" button in the toolbar to split the terminal into two independent panes, each with its own SSH connection — ideal for monitoring logs on one side and running commands on the other.
+
+- **One-click clone** — Connect the second pane to the current host automatically
+- **Independent connections** — Each pane has its own WebSocket
+- **Narrow-screen collapse** — Panes auto-collapse on narrow viewports and restore when widened
+- **Refresh persistence** — Split layout is restored after page refresh
+
+---
+
+## Session Suspension
+
+Similar to Unix `screen`, you can explicitly suspend the current SSH session without disconnecting. The session stays alive on the server after closing the tab and can be resumed from the suspended list with command history intact.
+
+| Action | Description |
+|--------|-------------|
+| Suspend Session | Click the "Suspend" button in the toolbar |
+| Reattach | Resume from the "Suspended" entry on the host dashboard |
+| Group Suspend | In split mode, supports suspending and reattaching as a group |
+| TTL Limit | Up to 20 suspended sessions per user; cleared on client restart |
+
+---
+
+## Persistent Shell & Alerts
+
+R-Bot provides an SSH retention suite for long-running operations:
+
+- **Persistent Shell (reattach)** — Shell process keeps running on the server after browser close or network drop, auto-reattaches on next open with command history preserved
+- **Resource Alerts** — Configure CPU / memory / disk thresholds; alerts pushed to Telegram on breach
+- **Multi-Cloud Health Check** — One panel summarizing instance status and DNS info across all cloud platforms
 
 ---
 

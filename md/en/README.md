@@ -87,11 +87,13 @@ Full list → [Implemented Features](./function.md) ｜ [Bot Commands](./BOT-REA
 
 Access through your browser — no client software required.
 
-- **SSH Connections** — Password and private key auth, multi-tab, auto-reconnect, SOCKS5 proxy
+- **SSH Connections** — Password and private key auth, multi-tab, split-screen, session suspension, persistent shell, auto-reconnect, SOCKS5 proxy
 - **Resource Monitor** — Real-time CPU, memory, disk, and network metrics in top bar
 - **SFTP File Manager** — Browse, upload, download, delete, online edit (syntax highlighting)
 - **Port Forwarding** — Local and remote forwarding
 - **Batch Commands** — Send commands to multiple hosts simultaneously, result workbench with continuous execution
+- **Resource Alerts** — CPU / memory / disk threshold alerts pushed via Telegram
+- **Multi-Cloud Health Check** — One-screen overview of instance status across all cloud platforms
 - **Host Dashboard** — Card grid displaying all sessions with search, quick connect
 - **Session Management** — Save connection profiles, centralized key management
 - **Cloud Host Sync** — One-click discover hosts from OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion and import to session list
