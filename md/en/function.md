@@ -22,6 +22,7 @@
 - [x] One-click account health check (batch detect all account status)
 - [x] Auto IP change monitoring (with DNS binding, IP range filtering)
 - [x] Quick boot (save configs, batch multi-profile boot)
+- [x] Boot notification marks account type (upgraded / regular, by subscription paymentModel)
 - [x] Oracle subscription info query
 - [x] Last 3 months traffic query
 - [x] Quota query (instances, network, storage)
@@ -41,6 +42,7 @@
 
 - [x] EC2 instance management (list, start, stop, reboot, terminate)
 - [x] Custom EC2 instance creation (AMI, instance type, key pair selection)
+- [x] Lightsail instance management (list, start, stop, reboot, delete, traffic query)
 - [x] Change IP
 - [x] Cost query
 - [x] Quota usage query
@@ -86,10 +88,15 @@
 - [x] Multi-tab parallel terminals
 - [x] SFTP file management (browse, upload, download, delete files/folders, create directories)
 - [x] SFTP online text editor (syntax highlighting, edit server files directly in browser)
+- [x] SFTP transfer manager panel (concurrent multi-task progress, speed, cancel, recently-finished history)
+- [x] Exec-channel file transfer fallback for hosts without an SFTP subsystem (OpenWrt/dropbear/busybox still transfer files)
 - [x] SSH port forwarding (local / remote)
 - [x] SSH auto-reconnect on disconnect (exponential backoff, supports reboot / network interruption scenarios)
 - [x] Batch commands (send to multiple hosts simultaneously, result workbench with continuous execution)
 - [x] Terminal toolbar (favorites, search, quick tool access)
+- [x] Terminal WebGL rendering (xterm.js 6.0, auto-fallback to DOM) + official search addon (highlight / overview ruler / count)
+- [x] Multi-line paste protection (whole block stops on the input line, press Enter to run, prevents accidental script execution)
+- [x] Host tags & group filtering (inline tagging on cards, AND-intersection filter, hit count, search matches tags)
 - [x] Terminal split-screen (horizontal split into two independent panes, one-click clone of current session, refresh persistence)
 - [x] Session suspension (screen-style explicit suspend + reattach from list, up to 20 per user)
 - [x] Persistent shell (shell process keeps running on server after browser close, auto-reattach on next open)
@@ -103,7 +110,7 @@
 - [x] Resource monitor panel (top bar displaying real-time CPU / memory / disk / network metrics)
 - [x] ACME auto SSL certificates (Let's Encrypt)
 - [x] Cloud host sync (one-click discover hosts from OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion and import to session list, real-time SSE progress)
-- [x] Cloud platform config online upload & management (OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion, merge mode + hot reload)
+- [x] Cloud platform config online upload, editing & management (OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion, merge mode + inline edit/delete single Profile + secret masking + hot-reload on save)
 - [x] Telegram verification code login + anti-brute-force
 - [x] Chinese/English interface switching
 - [x] Page state memory (auto-restore position after refresh, cloud management sub-page state sync)
@@ -122,6 +129,7 @@
 - [x] Force ARM boot (improve ARM creation success rate for trial accounts, supports Web + Telegram)
 - [x] Network management (change IP, attach IPv4/IPv6, reserved IP, delete IP)
 - [x] Volume management (resize, VPU performance, detach, delete, batch VPU)
+- [x] A1 config audit / downscale (parallel scan of each account's A1.Flex usage vs the always-free cap; account-level / batch / per-instance preemptive downscale, downscale-only, never auto-deletes instances)
 - [x] User management (create, delete, reset password, update email, clear MFA, rename tenant, view identity domain password policy)
 - [x] Statistics overview (cost, traffic, subscription info, quota)
 - [x] Profile management (list, switch, delete)
@@ -134,6 +142,8 @@
 
 - [x] EC2 instance management (list, start, stop, reboot, terminate)
 - [x] Create EC2 instances (AMI selection, instance type, key management, async creation)
+- [x] Lightsail instance management (list, start, stop, reboot, delete, current-month traffic monitoring)
+- [x] Lightsail network / IP management (static IP allocate/attach/detach/release, change static IP, reboot to change dynamic IP, firewall ports)
 - [x] Network management (VPC, security groups)
 - [x] Cost statistics (Cost Explorer integration)
 - [x] Quota usage query
@@ -181,7 +191,7 @@
 
 ## Cloud Host Sync
 
-- [x] Multi-cloud host discovery (OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion parallel queries)
+- [x] Multi-cloud host discovery (OCI / AWS EC2 / AWS Lightsail / GCP / Azure / DO / SolusVM / VirtFusion parallel queries)
 - [x] Auto-import to SSH session list (IP deduplication, IPv6 support)
 - [x] Real-time SSE progress feedback (per-platform query status)
 

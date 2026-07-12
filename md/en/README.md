@@ -72,7 +72,7 @@ Details → [Installation & Configuration](./install.md)
 
 ### Telegram Bot — Cloud Management
 
-Operated through the Telegram bot, supporting Oracle Cloud, AWS, GCP, Azure, DigitalOcean, SolusVM, and VirtFusion.
+Operated through the Telegram bot, supporting Oracle Cloud, AWS (EC2 / Lightsail), GCP, Azure, DigitalOcean, SolusVM, and VirtFusion.
 
 - **Instance Management** — Boot, scale up/down, reset OS, terminate
 - **IP Management** — Change IP, auto DNS update, IPv6
@@ -94,9 +94,9 @@ Access through your browser — no client software required.
 - **Batch Commands** — Send commands to multiple hosts simultaneously, result workbench with continuous execution
 - **Resource Alerts** — CPU / memory / disk threshold alerts pushed via Telegram
 - **Multi-Cloud Health Check** — One-screen overview of instance status across all cloud platforms
-- **Host Dashboard** — Card grid displaying all sessions with search, quick connect
+- **Host Dashboard** — Card grid displaying all sessions with search, tag grouping, quick connect
 - **Session Management** — Save connection profiles, centralized key management
-- **Cloud Host Sync** — One-click discover hosts from OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion and import to session list
+- **Cloud Host Sync** — One-click discover hosts from OCI/AWS EC2/AWS Lightsail/GCP/Azure/DO/SolusVM/VirtFusion and import to session list
 - **SSL Certificates** — Built-in ACME auto-provisioning (Let's Encrypt)
 - **OCI Object Storage** — Manage Buckets and objects in-browser
 
@@ -109,6 +109,7 @@ Details → [Web SSH Terminal Guide](./webssh.md)
 Manage multi-cloud resources directly from your browser — fully aligned with the Telegram bot's capabilities.
 
 - **Instance Management** — Create instance, quick boot, start, stop, reboot, terminate, reset OS, scale up/down
+- **A1 Config Audit** — Scan OCI ARM always-free quota + preemptive downscale (account-level / batch / per-instance, never auto-deletes instances)
 - **Serial Console** — OCI instance serial console connection with Netboot.xyz rescue boot automation
 - **Network Management** — Change IP, attach IPv4/IPv6, reserved IP management
 - **Volume Management** — Resize, VPU performance tuning, detach/delete
@@ -117,7 +118,7 @@ Manage multi-cloud resources directly from your browser — fully aligned with t
 - **DNS Management** — Cloudflare domain record CRUD operations
 - **Object Storage** — OCI Object Storage bucket and file management
 - **Email Delivery** — One-click email domain setup (DKIM/DNS/SMTP fully automated), test send
-- **AWS Management** — EC2 instance create/manage/delete, network management, cost statistics
+- **AWS Management** — EC2 instance create/manage/delete, Lightsail instance list/power/delete/traffic/network-IP management, network management, cost statistics
 - **GCP Management** — Compute Engine instance create/manage/delete, change IP, overview stats, traffic query
 - **DigitalOcean Management** — Droplet create/manage, reserved IP, bandwidth monitoring, billing overview
 - **Azure Management** — VM create/delete/restart, change IP, resource usage

@@ -107,6 +107,8 @@ When an SSH connection is interrupted (e.g., server reboot or network fluctuatio
 
 Multiple SSH connections can be open simultaneously, each in its own tab, freely switchable. The tab bar also integrates system resource monitoring metrics (CPU / Memory / Disk / Network).
 
+> The terminal is built on xterm.js 6.0 with WebGL rendering (auto-fallback to DOM where unsupported) for smoother heavy output; search uses the official addon with full-match highlighting, overview-ruler markers, and a hit counter.
+
 ![Terminal Interface](../../screenshots/terminal.jpg)
 
 ---
@@ -120,6 +122,12 @@ After connecting, the toolbar provides quick access to common features:
 - **Tools** — Quick access to common operations
 - **Split** — Split the current terminal horizontally into two independent panes
 - **Suspend** — Explicitly suspend the current session; it remains on the server after closing the tab
+
+---
+
+## Multi-Line Paste Protection
+
+When you right-click-paste multi-line commands, the entire block is placed on the input line but **not executed automatically** — press Enter once more to run it (trailing newline stripped + bracketed-paste negotiation), preventing an accidentally pasted script from running immediately. Single-line paste keeps the original auto-execute behavior. A subtle hint is shown when the remote side does not enable bracketed paste.
 
 ---
 
@@ -171,6 +179,18 @@ After connecting via SSH, click the "SFTP" button in the tab bar to open the fil
 | **Online Edit** | syntax highlighting — edit server files directly in the browser |
 | **Delete Files/Folders** | Inline confirmation, supports recursive directory deletion |
 | **Create Directory** | Create new folders in the current path |
+
+### Transfer Manager
+
+Uploads and downloads are consolidated into a dedicated **Transfer Manager panel**:
+
+- Per-task progress bars for concurrent transfers, with live speed and percentage
+- Collapsible to a pill, keeps a recently-finished history, cancel a single transfer or all at once
+- In split mode, each pane's transfer state is isolated — no cross-talk
+
+### Fallback for Hosts Without SFTP
+
+When connecting to hosts without an SFTP subsystem (OpenWrt / dropbear / busybox, etc.), the file panel automatically falls back to the exec channel — browse, upload, download, create directory, delete, and online edit all keep working transparently; a compatibility banner at the top of the panel indicates the degraded transfer mode.
 
 <!-- Screenshot placeholder: SFTP file management panel -->
 <!-- ![SFTP Panel](../../screenshots/sftp.png) -->
@@ -227,6 +247,15 @@ The default view after login displays all saved sessions as a **responsive card 
 
 The dashboard header provides a search box (filter by name / IP) and an "Add Session" button.
 
+### Host Tags & Filtering
+
+Tag host cards to quickly group and filter large session lists:
+
+- **Add / Remove Tags** — Type a tag name inline on a card and press Enter to add; click the × on a tag to remove it (up to 12 tags per host, 24 chars each)
+- **Tag Filter Bar** — A tag filter row at the top of the dashboard; selecting multiple tags filters by intersection (AND) and shows a hit count
+- **Expand / Collapse / Clear** — Collapse when there are many tags; clear all filters in one click
+- **Search Matches Tags** — The search box matches session name, IP, and tags
+
 ### Save Sessions
 
 After a successful connection, save the current configuration as a session from the config drawer for one-click reconnection from the host dashboard. Saved information includes:
@@ -257,7 +286,7 @@ One-click discover hosts from multiple cloud platforms and auto-import them into
 | Platform | Synced Content |
 |----------|----------------|
 | **Oracle Cloud (OCI)** | All instance public/private IPs, names, shapes, regions |
-| **AWS** | EC2 instance public/private IPs, names (Name tag), instance types, regions |
+| **AWS** | EC2 and Lightsail instance public/private IPs, names, instance types / bundles, regions |
 | **GCP** | Compute Engine instance public/private IPs, names, machine types, zones |
 | **DigitalOcean** | Droplet public/private IPs, names, regions, sizes |
 | **Azure** | VM IP addresses and instance info |
@@ -333,7 +362,7 @@ The web interface supports Chinese/English switching via the language selector i
 | Item | Specification |
 |------|---------------|
 | Protocol | HTTPS (TLSv1.3) + WebSocket |
-| Terminal | xterm.js |
+| Terminal | xterm.js 6.0 (WebGL rendering with DOM fallback) |
 | Max Connections | 200 concurrent |
 | Max Message Size | 8 MB |
 | Stale Connection Cleanup | 30-minute timeout with auto-reclaim |

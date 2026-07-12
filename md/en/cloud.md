@@ -77,6 +77,20 @@ Switch between Profiles to view different account information.
 | Detach | Detach volume from instance |
 | Delete | Permanently delete block storage volume |
 
+### A1 Config Audit / Downscale
+
+A dedicated workbench for the OCI ARM (A1.Flex) always-free quota — one-click bring over-provisioned accounts back within the free tier.
+
+| Action | Description |
+|--------|-------------|
+| Config Audit | Scan every account's current-region A1.Flex usage in parallel against the free-tier cap (2 OCPU / 12 GB), flagging Over quota / Within quota / Query failed |
+| Account Downscale | Popup with a customizable target spec (recommended 2 OCPU / 12 GB), evenly split across the account's instances |
+| Batch Downscale | Select all downscalable accounts and submit in bulk |
+| Per-Instance Downscale | Downscale a single instance with the recommended value pre-filled |
+| Downscale Method | Reuses preemptive resize (auto-retry on capacity contention until success + Telegram notify + cancelable in task list); downscale-only, never auto-deletes instances |
+| Delete Instance | Per-instance double confirmation; no blind bulk delete |
+| Scope | Non-Lightning users audit the current account only; Lightning users can audit / downscale all accounts at once |
+
 ### User Management
 
 | Action | Description |
@@ -151,6 +165,24 @@ Connect to an OCI instance's serial console via Console Connection — useful fo
 | Start / Stop / Reboot | Basic instance power operations |
 | Terminate | Permanently delete EC2 instance |
 
+### Lightsail Instance Management
+
+| Action | Description |
+|--------|-------------|
+| View Instance List | Show Lightsail instances with public IP, bundle, blueprint, spec, region, and creation time |
+| Start / Stop / Reboot | Basic power operations |
+| Delete Instance | Delete a Lightsail instance (dangerous action, requires confirmation) |
+| Traffic This Month | View inbound / outbound / total traffic and the bundle allowance; sourced from monitoring metrics, not billing usage |
+
+### Lightsail Network / IP Management
+
+| Action | Description |
+|--------|-------------|
+| Static IP Management | Allocate and attach a static IP, detach, release |
+| Change Static IP | Allocate a new static IP, switch the attachment, and release the old one |
+| Change Dynamic IP | Stop then start to try to obtain a new dynamic public IP when no static IP is attached |
+| Firewall Ports | View and save public port rules; supports single ports and port ranges |
+
 ### Network Management
 
 | Action | Description |
@@ -163,7 +195,7 @@ Connect to an OCI instance's serial console via Console Connection — useful fo
 | Action | Description |
 |--------|-------------|
 | Cost Statistics | AWS Cost Explorer integration for spending details |
-| Usage Monitoring | CloudWatch metrics queries |
+| Usage Monitoring | CloudWatch / Lightsail metrics queries |
 | Quota Query | View resource quota usage |
 
 ---
@@ -277,6 +309,7 @@ Connect to an OCI instance's serial console via Console Connection — useful fo
 | Auto-Start | Auto-start instances when anomalies detected |
 | Daily Report | Scheduled push of cost and traffic reports |
 | Health Check | Batch check all Profile account status |
+| Boot Notification Account Type | Boot notifications mark the account as upgraded / regular (determined by OCI subscription paymentModel; left unmarked if uncertain) |
 
 ### ACME Certificates
 
@@ -284,7 +317,7 @@ Configure Let's Encrypt auto-certificates in the Settings page. See [Web SSH Gui
 
 ### Cloud Platform Configuration
 
-Upload and manage cloud platform API configurations directly from the web interface — no need to manually edit the `client_config` file.
+Upload, edit, and manage cloud platform API configurations directly from the web interface across all 7 clouds (OCI/AWS/GCP/Azure/DO/SolusVM/VirtFusion) — no need to manually edit the `client_config` file.
 
 | Feature | Description |
 |---------|-------------|
@@ -296,9 +329,13 @@ Upload and manage cloud platform API configurations directly from the web interf
 | SolusVM Config Upload | Paste API URL and key configuration |
 | VirtFusion Config Upload | Paste host/token/preset or use preset vendors for quick filling |
 | Merge Mode | Duplicate Profile names are skipped with a warning, new Profiles are appended |
+| Online Profile Editing | Configured Profiles are shown as a chip list; click to edit fields inline — no more SSH-ing in to edit files |
+| Delete Single Profile | Delete a specific Profile and clean up dangling default-Profile references |
+| Secret Masking | Secrets / tokens are masked in the UI; plaintext is never sent to the browser |
+| AWS Region Fix | Real-time hint and one-click fix when a region is mistyped as an availability zone (e.g. ap-southeast-1a) |
 | Cloudflare Config | Edit Cloudflare email and API Key online |
 | Network Config | Edit local address, URL name, and startup mode online |
-| Hot Reload | Manually refresh in-memory configuration without restarting the client |
+| Hot Reload | Configuration hot-reloads immediately on save; can also be refreshed manually — no client restart needed |
 
 ---
 
@@ -323,7 +360,7 @@ Switch themes using the selector in the top bar. Toggle the light/dark mode butt
 
 ## Cloud Instance Quick SSH
 
-All cloud platforms (OCI / AWS / GCP / Azure / DO / SolusVM / VirtFusion) provide an "SSH" button on instance cards. Click to jump directly to the terminal and connect to the instance — no manual connection setup needed. Each card also provides a one-click IP copy button.
+All cloud platforms (OCI / AWS EC2 / AWS Lightsail / GCP / Azure / DO / SolusVM / VirtFusion) provide an "SSH" button on instance cards. Click to jump directly to the terminal and connect to the instance — no manual connection setup needed. Each card also provides a one-click IP copy button.
 
 ---
 
